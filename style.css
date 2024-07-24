@@ -1,0 +1,475 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+html{
+    overflow-x: hidden;
+}
+body{
+    overflow-x: hidden;
+}
+
+
+/* BANNER */
+#banner{
+    width: 100%;
+    height: 70vh;
+    /* overflow-x: hidden; */
+    position: relative;
+}
+#banner img{
+    width: 100%;
+    height: 70vh;
+}
+#banner-screen{
+    height: 70vh;
+    width: 100%;
+    background-color: rgb(16, 16, 86);
+    position: absolute;
+    top: 0; left: 0;
+    opacity: 0.5;
+}
+#banner-text{
+    height: 10vh;
+    width: 100%;
+    color: white;
+    position: absolute;
+    top: 0; left: 0;
+    padding: 150px 80px;
+}
+#banner-text h1{
+    font-size: 60px;
+}
+
+
+
+/* CONTENT */
+#content{
+    padding: 2rem 0rem;
+}
+#intro{
+    padding: 2rem 20rem;
+}
+#intro p{
+    font-size: 20px;
+    color: #7e7e7e;
+}
+
+
+/* ACHIEVEMENTS */
+#achievements-section{
+    width: 90%;
+    margin: auto;
+    height: fit-content;
+    border-radius: 4rem;
+    position: relative;
+}
+.achievements-img{
+    width: 100%;
+    height: 125vh;
+    border-radius: 4rem;
+}
+#achievements-screen{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0; left: 0;
+    border-radius: 4rem;
+    background-color: rgb(16, 16, 86);
+    opacity: 0.6;
+}
+#achievements-text{
+    width: 100%;
+    height: fit-content;
+    position: absolute;
+    top: 0; left: 0;
+    padding: 2rem;
+}
+.heading{
+    font-family: "Anton", sans-serif ;
+    font-weight: 500;
+    font-size: 60px;
+    font-style: normal;
+    width: fit-content;
+    margin: auto;
+    text-align: center;
+    color: white;
+}
+#achievements{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: fit-content;
+    padding: 3rem;
+}
+
+.card{
+    height: 220px;
+    min-width: 50%;
+    max-width: 80%;
+    border: none;
+    border-radius: 10rem 15rem 15rem 2rem;
+    padding: 0 0 0 1rem;
+    flex-basis: 50%;
+    flex-grow: 1;
+    display: flex;
+    background-color: rgb(246, 233, 211);
+}
+.card-right{
+    margin: 15rem 0 2rem 0;
+    border-radius: 15rem 10rem 2rem 15rem ;
+}
+.card-content{
+    width: 70%;
+    padding: 1rem 0 1rem 1rem;
+}
+.card-content h2{
+    font-size: 30px;
+    color: #2e2e2e;
+}
+.card-content p{
+    font-size: 18px;
+    color: #7e7e7e;
+}
+.card-img{
+    border-radius: 50%;
+    position: relative;
+    left: 1rem;
+}
+.card-right-img{
+    left: -5rem;
+}
+.card-img img{
+    width: 125%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+
+/* CHARITY */
+#charity-section{
+    position: relative;
+}
+#charity-img{
+    height: 25vh;
+    width: 100%;
+}
+#charity-screen{
+    height: 35vh;
+    width: 100%;
+    background-color: rgb(16, 16, 86);
+    position: absolute;
+    top: 0; left: 0;
+    opacity: 0.6;
+}
+#charity-heading{
+    height: 35vh;
+    width: 100%;
+    position: absolute;
+    top: 0; left: 0;
+}  
+#charity-scroller{
+    width: 100%;
+}
+.charity-scroller-inner{
+    display: flex;
+}
+#charity-scroller[data-animated="true"] {
+    overflow: hidden;
+    -webkit-mask: linear-gradient(90deg, transparent, white 10%, white 90%, transparent);
+    mask: linear-gradient(90deg, transparent, white 10%, white 90%, transparent);
+}
+#charity-scroller[data-animated="true"] .charity-scroller-inner{
+    width: max-content;
+    animation: scroll 20s linear infinite;
+}
+@keyframes scroll{
+    to{
+        transform: translate(-50%);
+    }
+}
+.charity-scroll-list{
+    margin: 0;
+    padding-inline: 0;
+}
+.charity-scroll-list li{
+    width: 80%;
+}
+.charity-scroll-img{
+    height: 30vh;
+    width: 100%;
+}
+#charity-text{
+    padding: 2rem 25rem;
+}
+#charity-text p{
+    font-size: 20px;
+    color: #7e7e7e;
+}
+
+
+/* VIDEO SECTION */
+#videoDiv{
+    width: 100%;
+    height: 80vh;
+    position: relative;
+    display: flex;
+}
+#videoDiv-content{
+    width: 40%;
+    height: 100%;
+}
+#videoDiv-img{
+    height: 100%;
+    width: 100%;
+}
+#videoDiv-screen{
+    height: 100%;
+    width: 40%;
+    background-color: rgb(16, 16, 86);
+    opacity: 0.3;
+    position: absolute;
+    top: 0; left: 0;
+}
+#videoDiv-heading{
+    position: absolute;
+    top: 30px; left: 60px;
+}
+
+#videoDiv-video{
+    height: 100%;
+    width: 60%;
+}
+
+
+
+.hidden-left{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+.hidden-right{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(100%);
+    transition: all 1s;
+}
+.show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+@media(prefers-reduced-motion){
+    .hidden-left {
+        transition: none;
+    }
+    .hidden-right {
+        transition: none;
+    }
+}
+
+
+@media screen and (min-width: 900px ) and (max-width: 1100px) {
+    body{
+        overflow-x: hidden;
+    }
+    #banner-text{
+        padding: 17rem 0 0 0;
+        text-align: center;
+    }
+    
+    #content{
+        padding: 1rem;
+    }
+    #intro{
+        padding: 1rem 5rem;
+    }
+    
+    .achievements-img{
+        height: 160vh;
+    }
+    .card{
+        min-width: 55%;
+        height: 210px;
+        border-radius: 10rem 25rem 25rem 2rem;
+    }
+    .card-right{
+        margin: 5rem 0;
+        border-radius: 15rem 10rem 2rem 15rem ;
+    }
+    .card-content h2{
+        font-size: 25px;
+    }
+    .card-content p{
+        font-size: 18px;
+    }
+    
+}
+
+@media (min-width: 500px) and (max-width: 900px) {
+    body{
+        overflow-x: hidden;
+    }
+    #banner, #banner img, #banner-screen, #banner-text{
+        height: 65vh;
+    }
+    #banner-text{
+        padding: 16rem 0 0 0;
+        text-align: center;
+    }
+    #banner-text h1{
+        font-size: 48px;
+    }
+
+    #content{
+        padding: 0.5rem;
+    }
+    #intro{
+        padding: 1rem 4rem;
+    }
+    #intro p{
+        font-size: 18px;
+    }
+
+    .heading{
+        font-size: 48px;
+    }
+
+    #achievements-text{
+        padding: 0.5rem;
+    }
+    #achievements{
+        padding: 0;
+    }
+    .achievements-img{
+        height: 80vh;
+    }
+    .card{
+        min-width: 60%;
+        height: 180px;
+        padding: 0;
+    }
+    .card-right{
+        margin: 4rem 0 3rem 8rem;
+    }
+    .card-content h2{
+        font-size: 20px;
+    }
+    .card-content p{
+        font-size: 15px;
+    }
+    #charity-text{
+        padding: 2rem 10rem;;
+    }
+
+    #videoDiv{
+        display: block;
+    }
+    #videoDiv-content, #videoDiv-screen{
+        width: 100%;
+    }
+    #videoDiv-video{
+        width: 100%;
+    }
+}
+
+@media (min-width: 300px) and (max-width: 500px) {
+    body{
+        overflow-x: hidden;
+    }
+
+    #banner, #banner img, #banner-screen, #banner-text{
+        height: 40vh;
+    }
+    #banner-text{
+        padding-top: 10rem;
+        text-align: center;
+    }
+    #banner-text h1{
+        font-size: 36px;
+    }
+
+    #intro{
+        padding: 1rem;
+    }
+    #intro p{
+        font-size: 15px;
+    }
+
+    .heading{
+        font-size: 36px;
+    }
+    #content{
+        padding: 0;
+    }
+    #achievements-section{
+        margin: 0;
+        width: 100%;
+    }
+    #achievements-screen{
+        border-radius: 0;
+    }
+    #achievements-text{
+        padding: 0.5rem;
+        border-radius: 0;
+    }
+    #achievements{
+        padding: 0;
+    }
+    .achievements-img{
+        height: 90vh;
+    }
+    .card{
+        min-width: 60%;
+        max-width: 90%;
+        height: 20vh;
+        padding: 0;
+        border-radius: 2rem 20rem 20rem 2rem;
+    }
+    .card-right{
+        max-width: 99%;
+        margin: 4rem 0;
+        border-radius: 20rem 2rem 2rem 20rem ;
+    }
+    .card-content{
+        padding: .5rem 0 .5rem .5rem;
+    }
+    .card-content h2{
+        font-size: 16px;
+    }
+    .card-content p{
+        font-size: 14px;
+    }
+    .card-img img{
+        width: 120%;
+    }
+    .card-right-img{
+        left: -.5rem;
+    }
+
+    #charity-text{
+        padding: 1rem;
+    }
+    #charity-text p{
+        font-size: 15px;
+    }
+    
+    #videoDiv{
+        display: block;
+    }
+    #videoDiv-content, #videoDiv-screen{
+        width: 100%;
+    }
+    #videoDiv-heading{
+        position: absolute;
+        top: 80px;
+        left: 70px;
+    }
+    #videoDiv-video{
+        width: 100%;
+        height: 100%;
+    }
+}
